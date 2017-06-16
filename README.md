@@ -27,6 +27,7 @@ The goals / steps of this project are the following:
 * Warp the detected lane boundaries back onto the original image.
 * Output visual display of the lane boundaries and numerical estimation of lane curvature and vehicle position.
 
+See my [video_result_demo](https://www.youtube.com/watch?v=yJA8CJggSBU&feature=youtu.be) on youtube.
 
 ### Note: all python files(`except` for the python class `Lane_class.py`) can run separately. You can also see my jupyter notebook `Advanced_lane_detection.ipynb` for more visual results.   
 
