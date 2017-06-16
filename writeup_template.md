@@ -21,8 +21,8 @@ The goals / steps of this project are the following:
 
 [//]: # (Image References)
 
-[image1]: ./output_img/camera_calibration_example "camera_calibration"
-[image2]: ./output_img/test2_udist_example "calibration and undist image"
+[image1]: ./output_img/camera_calibration_example.jpg "camera_calibration"
+[image2]: ./output_img/test2_udist_example.jpg "calibration and undist image"
 [image3]: ./output_img/test2_threshold_example.jpg "combined threshold image"
 [image4]: ./output_img/test2_binary_warped_example.jpg "Binary warped or bird view image"
 [image5]: ./output_img/peaks_histogram.jpg "peaks histogram of the Binary warped or bird view image"
