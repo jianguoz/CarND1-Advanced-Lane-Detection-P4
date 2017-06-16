@@ -1,4 +1,5 @@
 ## Advanced Lane Finding
+## Jianguo Zhang, June 14, 2017
 [![Udacity - Self-Driving Car NanoDegree](https://s3.amazonaws.com/udacity-sdc/github/shield-carnd.svg)](http://www.udacity.com/drive)
 
 
@@ -34,25 +35,6 @@ The `challenge_video.mp4` video is an extra (and optional) challenge for you if 
 
 If you're feeling ambitious (again, totally optional though), don't stop there!  We encourage you to go out and take video of your own, calibrate your camera and show us how you would implement this project from scratch!
 
-
-## Writeup Template
-## Jianguo Zhang, June 14, 2017
-### You can use this file as a template for your writeup if you want to submit it as a markdown file, but feel free to use some other method and submit a pdf if you prefer.
-
----
-
-**Advanced Lane Finding Project**
-
-The goals / steps of this project are the following:
-
-* Compute the camera calibration matrix and distortion coefficients given a set of chessboard images.
-* Apply a distortion correction to raw images.
-* Use color transforms, gradients, etc., to create a thresholded binary image.
-* Apply a perspective transform to rectify binary image ("birds-eye view").
-* Detect lane pixels and fit to find the lane boundary.
-* Determine the curvature of the lane and vehicle position with respect to center.
-* Warp the detected lane boundaries back onto the original image.
-* Output visual display of the lane boundaries and numerical estimation of lane curvature and vehicle position.
 
 ### Note: all python files(`except` for the python class `Lane_class.py`) can run separately. You can also see my jupyter notebook `Advanced_lane_detection.ipynb` for more visual results.   
 
