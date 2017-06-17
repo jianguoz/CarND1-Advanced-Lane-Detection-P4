@@ -93,6 +93,8 @@ I used a combination of color and gradient thresholds to generate a binary image
 
 4. Use S chanel of HLS color space since it can strength yellow lines while grayscale perform bad on yellow lines.
 
+5. Use YUV color space. Pixels with a V component less than 105 are deemed white, while pixels with a Y component greater than or equal to 205 are deemed yellow
+
 Here is the combined threshold applyed to one of the test image like this one:
 ![alt text][image3]
 
