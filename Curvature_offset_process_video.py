@@ -174,11 +174,13 @@ def process_video_image(img):
         else:
             # Calculate curvature based on previous frames
             left_curvature, right_curvature = special_left_curv, special_right_curv
-            detected =False
+            detected = False
             
         
     # Calculate vehicle offset from the lane center in the image
     vehicle_offset = calculate_offset(undist, left_fit, right_fit)
+    if vehicle_offset > 0.25:
+        detected = False
     
     # Project the measurement back down onto the original undistorted image of the road
     result = final_drawing(undist, left_fit, right_fit, left_curvature, right_curvature, Minv, vehicle_offset)

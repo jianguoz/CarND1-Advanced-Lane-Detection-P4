@@ -10,7 +10,7 @@ import matplotlib.image as mpimg
 import pickle
 #% matplotlib inline
 
-def abs_sobel_thresh(img, orient='x', sobel_kernel=3, thresh=(0,255)):
+ddef abs_sobel_thresh(img, orient='x', sobel_kernel=3, thresh=(0,255)):
     '''Calculated directional gradient'''
     
     # Convert to grayscale
@@ -103,20 +103,37 @@ def hls_color(img, thresh=(0,255)):
     
     return binary_out
 
+def yuv_color(img, thresh=(0,255)):
+    '''Another effective approach is to obtain lane pixels by color. 
+       The rationale behind it is that lanes in this project are either yellow or white. 
+       we can also only YUV color space to do the thresholding, 
+       Pixels with a V component less than 105 are deemed white, while pixels with a Y
+       component greater than or equal to 205 are deemed yellow'''
+    
+    yuv = cv2.cvtColor(img, cv2.COLOR_RGB2YUV)
+    Y = yuv[:,:,0]
+    U = yuv[:,:,1]
+    V = yuv[:,:,2]
+    
+    # Apply a mask to S channel
+    binary_out = np.zeros_like(Y)
+    binary_out[(Y>=thresh[1]) & (Y<=255)] = 1
+    binary_out[(V>0) & (V<thresh[0])] = 1
+    
+    return binary_out
 
 def combined_thresh(image):
-
-    ksize = 3
     # Apply each of the thresholding functions
     gradx = abs_sobel_thresh(image, orient='x', sobel_kernel=ksize, thresh=(80, 255))
     grady = abs_sobel_thresh(image, orient='y', sobel_kernel=ksize, thresh=(80, 255))
     mag_binary = mag_thresh(image, sobel_kernel=9, mag_thresh=(100, 255))
     dir_binary = dir_threshold(image, sobel_kernel=15, thresh=(0.7, 1.3))
     s_binary = hls_color(image, thresh=(170, 255))
+    yuv_binary = yuv_color(image, thresh=(105, 205))
 
     combined = np.zeros_like(dir_binary)
-    combined[(gradx ==1| ((mag_binary == 1)&(dir_binary == 1))) | s_binary == 1] = 1
-    
+    combined[(gradx ==1| ((mag_binary == 1)&(dir_binary == 1))) | yuv_binary == 1] = 1
+   # combined = yuv_binary
     return combined
 
 
