@@ -208,7 +208,7 @@ Here is final result for one of the test image like this:
 
 **The code for this step**  can be found in lines 218-232 of `Curvature_offset_process_video.py`.
 
-Here's a [link to my video result](https://www.youtube.com/watch?v=yJA8CJggSBU&feature=youtu.be)
+Here's a [link to my video result](https://www.youtube.com/watch?v=ItwgPuQojds&feature=youtu.be)
 
 ---
 
@@ -218,5 +218,5 @@ In future, I will try to define the source(`src`) and destination(`dst`) points 
 
 #### 1. Briefly discuss any problems / issues you faced in your implementation of this project.  Where will your pipeline likely fail?  What could you do to make it more robust?
 
-Here I'll talk about the approach I took, what techniques I used, what worked and why, where the pipeline might fail and how I might improve it if I were going to pursue this project further.  
+If there are sunshine and shallows, it will become harder to recognize the lanes, I think I need to combine more threshold to make the recognition more robust.
 
