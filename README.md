@@ -1,5 +1,5 @@
 ## Advanced Lane Finding
-## Jianguo Zhang, June 14, 2017
+## Jianguo Zhang, June 14, 2017. Update on June 16, 2017.
 [![Udacity - Self-Driving Car NanoDegree](https://s3.amazonaws.com/udacity-sdc/github/shield-carnd.svg)](http://www.udacity.com/drive)
 
 
@@ -27,7 +27,7 @@ The goals / steps of this project are the following:
 * Warp the detected lane boundaries back onto the original image.
 * Output visual display of the lane boundaries and numerical estimation of lane curvature and vehicle position.
 
-See my [video_result_demo](https://www.youtube.com/watch?v=yJA8CJggSBU&feature=youtu.be) on youtube.
+See my [video_result_demo](https://www.youtube.com/watch?v=ItwgPuQojds&feature=youtu.be) on youtube.
 
 ### Note: all python files(`except` for the python class `Lane_class.py`) can run separately. You can also see my jupyter notebook `Advanced_lane_detection.ipynb` for more visual results.   
 
@@ -42,10 +42,6 @@ See my [video_result_demo](https://www.youtube.com/watch?v=yJA8CJggSBU&feature=y
 [image7]: ./output_img/test2_final_projected_example.jpg "Final projected Image"
 [video1]: ./project_video.mp4 "Video"
 
-## [Rubric](https://review.udacity.com/#!/rubrics/571/view) Points
-
-### Here I will consider the rubric points individually and describe how I addressed each point in my implementation.  
-
 ---
 
 ### Writeup / README
@@ -58,7 +54,7 @@ You're reading it!
 
 #### 1. Briefly state how you computed the camera matrix and distortion coefficients. Provide an example of a distortion corrected calibration image.
 
-**The code for this step** is contained in `camera_calibration.py`, you can `also` find them in jupyter notebook code `cell 2-3`.   
+**The code for this step** is contained in `camera_calibration.py`, you can `also` find them in jupyter notebook code `cell 3-4`.   
 
 We use ./camera_cal*.jpg to calibrate the camera. 
 
