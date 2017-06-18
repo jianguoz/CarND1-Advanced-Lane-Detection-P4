@@ -10,7 +10,7 @@ import matplotlib.image as mpimg
 import pickle
 #% matplotlib inline
 
-ddef abs_sobel_thresh(img, orient='x', sobel_kernel=3, thresh=(0,255)):
+def abs_sobel_thresh(img, orient='x', sobel_kernel=3, thresh=(0,255)):
     '''Calculated directional gradient'''
     
     # Convert to grayscale
@@ -124,6 +124,7 @@ def yuv_color(img, thresh=(0,255)):
 
 def combined_thresh(image):
     # Apply each of the thresholding functions
+    ksize = 3
     gradx = abs_sobel_thresh(image, orient='x', sobel_kernel=ksize, thresh=(80, 255))
     grady = abs_sobel_thresh(image, orient='y', sobel_kernel=ksize, thresh=(80, 255))
     mag_binary = mag_thresh(image, sobel_kernel=9, mag_thresh=(100, 255))

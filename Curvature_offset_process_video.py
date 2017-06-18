@@ -42,11 +42,11 @@ def calculate_offset(undist, left_fit, right_fit):
     '''Calculate the offset of the lane center from the center of the image'''
     
     xm_per_pix = 3.7/700 # meters per pixel in x dimension
-    ploty = undist.shape[1]
+    ploty = undist.shape[0] # height
     left_fitx = left_fit[0]*ploty**2 + left_fit[1]*ploty + left_fit[2]
     right_fitx = right_fit[0]*ploty**2 + right_fit[1]*ploty + right_fit[2]
     
-    offset = (left_fitx+right_fitx)/2 - ploty/2
+    offset = (left_fitx+right_fitx)/2 - undist.shape[1]/2 # width 
     offset = xm_per_pix*offset
     
     return offset
@@ -217,12 +217,12 @@ if __name__ == '__main__':
     plt.subplots_adjust(left=0., right=1, top=0.9, bottom=0.)
     plt.savefig('./output_img/test2_final_projected_example.jpg')   
 
-    # # Import everything needed to edit/save/watch video clips
-    # from moviepy.editor import VideoFileClip
-    # from IPython.display import HTML
+    # Import everything needed to edit/save/watch video clips
+    from moviepy.editor import VideoFileClip
+    from IPython.display import HTML
 
     # Define number of frames for smoothing
-    num_frames = 5
+    num_frames = 8
     left_lanes = Line(n=num_frames) 
     right_lanes = Line(n=num_frames)
     detected = False 
