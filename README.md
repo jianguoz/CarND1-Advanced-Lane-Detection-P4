@@ -95,7 +95,7 @@ I used a combination of color and gradient thresholds to generate a binary image
 Here is the combined threshold applyed to one of the test image like this one:
 ![alt text][image3]
 
-Here is the combined threshold applyed to another one of the test image with sharp raod and heavy shadows like this one:
+Here is the combined threshold applyed to another one of the test image with sharp road and heavy shadows like this one:
 ![alt text][image3_2]
 
 #### 3. Describe how (and identify where in your code) you performed a perspective transform and provide an example of a transformed image.
