@@ -36,6 +36,7 @@ See my [video_result_demo](https://www.youtube.com/watch?v=ItwgPuQojds&feature=y
 [image1]: ./output_img/camera_calibration_example.jpg "camera_calibration"
 [image2]: ./output_img/test2_udist_example.jpg "calibration and undist image"
 [image3]: ./output_img/test2_threshold_example.jpg "combined threshold image"
+[image3_2]: ./output_img/test_threshold_example.jpg "combined threshold image on sharp road"
 [image4]: ./output_img/test2_binary_warped_example.jpg "Binary warped or bird view image"
 [image5]: ./output_img/peaks_histogram.jpg "peaks histogram of the Binary warped or bird view image"
 [image6]: ./output_img/test2_polynomial_fit_example.jpg "Polynomial fit image"
@@ -93,6 +94,9 @@ I used a combination of color and gradient thresholds to generate a binary image
 
 Here is the combined threshold applyed to one of the test image like this one:
 ![alt text][image3]
+
+Here is the combined threshold applyed to another one of the test image with sharp raod and heavy shadows like this one:
+![alt text][image3_2]
 
 #### 3. Describe how (and identify where in your code) you performed a perspective transform and provide an example of a transformed image.
 
